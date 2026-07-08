@@ -76,7 +76,7 @@
 - 大陆生产环境可优先考虑 GLM-5.2 / Qwen 等稳定可接入模型。
 - GPT 可作为精品/灰度通道，但要考虑大陆接入、合规和成本风险。
 - 开源组件优先选择 Apache-2.0 / MIT 等商业友好许可证。
-- 可考虑 Vercel AI SDK、LiteLLM、Promptfoo、Playwright/Crawlee、Qwen3-Embedding。
+- 可考虑 Vercel AI SDK、LiteLLM、Promptfoo、Qwen3-Embedding。
 - 谨慎使用许可证不够宽松或限制 SaaS 的项目。
 
 ## 项目文档

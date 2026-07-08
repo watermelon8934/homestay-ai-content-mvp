@@ -6,7 +6,11 @@ export async function generateNote(
   property: Property,
 ): Promise<GenerateResult> {
   try {
-    const response = await fetch("/api/generate-note", {
+    const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL ?? "").replace(
+      /\/$/,
+      "",
+    );
+    const response = await fetch(`${apiBaseUrl}/api/generate-note`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ review, property }),
