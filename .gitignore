@@ -17,6 +17,7 @@ dist/
 dist-ssr/
 .output/
 app/.output/
+backend/target/
 .nitro/
 .vinxi/
 .tanstack/
