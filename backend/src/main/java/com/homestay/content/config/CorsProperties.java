@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import java.util.List;
 
 @ConfigurationProperties(prefix = "app.cors")
-public record CorsProperties(List<String> allowedOrigins) {
+public record CorsProperties(List<String> allowedOrigins, List<String> allowedOriginPatterns) {
     public List<String> safeAllowedOrigins() {
         if (allowedOrigins == null || allowedOrigins.isEmpty()) {
             return List.of(
@@ -16,5 +16,12 @@ public record CorsProperties(List<String> allowedOrigins) {
             );
         }
         return allowedOrigins;
+    }
+
+    public List<String> safeAllowedOriginPatterns() {
+        if (allowedOriginPatterns == null || allowedOriginPatterns.isEmpty()) {
+            return List.of("https://*.vercel.app");
+        }
+        return allowedOriginPatterns;
     }
 }
