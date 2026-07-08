@@ -1,0 +1,110 @@
+{
+  "query": "chrome-visible-samples",
+  "source": "Chrome 登录态小红书公开搜索页可见内容",
+  "collectedAt": "2026-07-08T05:55:45.256Z",
+  "notes": "通过用户已登录 Chrome 的小红书公开搜索页读取可见标题与链接；未进行点赞、收藏、评论、关注、私信等账号动作。",
+  "pages": [
+    {
+      "query": "大理民宿",
+      "sourceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E5%A4%A7%E7%90%86%E6%B0%91%E5%AE%BF&type=51",
+      "pageTitle": "大理民宿 - 小红书搜索",
+      "items": [
+        {
+          "title": "✨大理洱海旁奶油风两居｜房东直租闭眼冲",
+          "url": "https://www.xiaohongshu.com/search_result/6a02b67f00000000380345f8",
+          "visibleText": "✨大理洱海旁奶油风两居｜房东直租闭眼冲",
+          "likes": null,
+          "collects": null,
+          "comments": null
+        },
+        {
+          "title": "大理找民宿",
+          "url": "https://www.xiaohongshu.com/search_result/6a3c3a9b000000002201b6ca",
+          "visibleText": "大理找民宿",
+          "likes": null,
+          "collects": null,
+          "comments": null
+        },
+        {
+          "title": "大理民宿好难选！",
+          "url": "https://www.xiaohongshu.com/search_result/6900ee000000000007017f61",
+          "visibleText": "大理民宿好难选！",
+          "likes": null,
+          "collects": null,
+          "comments": null
+        },
+        {
+          "title": "大理万科拾叁月 海与月两居房东直租长短租",
+          "url": "https://www.xiaohongshu.com/search_result/6a1be88d0000000006023154",
+          "visibleText": "大理万科拾叁月 海与月两居房东直租长短租",
+          "likes": null,
+          "collects": null,
+          "comments": null
+        },
+        {
+          "title": "欣兰小院",
+          "url": "https://www.xiaohongshu.com/search_result/6a34fa20000000001101ec4b",
+          "visibleText": "欣兰小院",
+          "likes": null,
+          "collects": null,
+          "comments": null
+        }
+      ]
+    },
+    {
+      "query": "大理米糖的院子",
+      "sourceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E5%A4%A7%E7%90%86%E7%B1%B3%E7%B3%96%E7%9A%84%E9%99%A2%E5%AD%90&type=51",
+      "pageTitle": "大理米糖的院子 - 小红书搜索",
+      "items": [
+        {
+          "title": "有生活气息的民宿",
+          "url": "https://www.xiaohongshu.com/search_result/68b3c338000000001b0353bf",
+          "visibleText": "有生活气息的民宿",
+          "likes": null,
+          "collects": null,
+          "comments": null
+        },
+        {
+          "title": "大理古城惊艳你的民宿“米糖的院子”",
+          "url": "https://www.xiaohongshu.com/search_result/63051fe2000000001e00937f",
+          "visibleText": "大理古城惊艳你的民宿“米糖的院子”",
+          "likes": null,
+          "collects": null,
+          "comments": null
+        },
+        {
+          "title": "大理米糖的院子",
+          "url": "https://www.xiaohongshu.com/search_result/613810d30000000001027dc5",
+          "visibleText": "大理米糖的院子",
+          "likes": null,
+          "collects": null,
+          "comments": null
+        },
+        {
+          "title": "大理古城 | 邂逅千年南诏旧梦✨",
+          "url": "https://www.xiaohongshu.com/search_result/67c01142000000002900e589",
+          "visibleText": "大理古城 | 邂逅千年南诏旧梦✨",
+          "likes": null,
+          "collects": null,
+          "comments": null
+        },
+        {
+          "title": "推荐🏠 大理古城民宿",
+          "url": "https://www.xiaohongshu.com/search_result/6365146d0000000009012638",
+          "visibleText": "推荐🏠 大理古城民宿",
+          "likes": null,
+          "collects": null,
+          "comments": null
+        },
+        {
+          "title": "米糖的院子",
+          "url": "https://www.xiaohongshu.com/search_result/66c6db42000000001f016518",
+          "visibleText": "米糖的院子",
+          "likes": null,
+          "collects": null,
+          "comments": null
+        }
+      ]
+    }
+  ]
+}
