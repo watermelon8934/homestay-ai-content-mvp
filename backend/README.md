@@ -12,6 +12,14 @@ POST /api/generate-note
 
 如果不想在私人电脑安装 JDK，可以把代码推到 GitHub，再把 `backend/` 部署到支持 Docker 的云平台，例如 Render、Railway、Fly.io 或云服务器。
 
+如果使用 Render，仓库根目录已经提供：
+
+```text
+render.yaml
+```
+
+推荐用 Render Blueprint 导入仓库，让 Render 自动读取后端 Docker 配置。
+
 云平台部署后端时使用：
 
 ```text
