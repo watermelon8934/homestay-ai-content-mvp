@@ -1,0 +1,103 @@
+{
+  "sample_id": "20260709-dali-social-yard-search-candidates",
+  "source": "xiaohongshu_public_search_visible_results",
+  "status": "candidate_pool_not_few_shot",
+  "observed_at": "2026-07-09",
+  "query": "大理 民宿 小院 社交",
+  "purpose": "为后续继续采集图文匹配样本提供候选清单。以下内容只来自搜索结果可见信息，未确认完整正文和组图，不能直接作为 few-shot。",
+  "candidate_selection_rules": [
+    "优先打开民宿自营账号或疑似民宿主账号。",
+    "优先打开标题里同时包含大理、小院、年轻人、搭子、拼餐、社交、旅居等词的笔记。",
+    "打开后必须确认正文、图片、互动数据和评论区咨询信号，才能进入正式样本库。",
+    "只看公开内容，不点赞、不评论、不关注、不私信。"
+  ],
+  "candidates": [
+    {
+      "title": "大理旅居来我家！！年轻人专属群像小院！",
+      "account": "大理吉市十六民宿",
+      "visible_date": "04-29",
+      "visible_metric": "49",
+      "priority": "high",
+      "reason": "民宿账号，标题清楚指向年轻人、小院、群像，适合验证社交型民宿主口吻。"
+    },
+    {
+      "title": "在大理住进全是年轻人搭子的小院，来值了❗️",
+      "account": "大理吉市十六民宿",
+      "visible_date": "05-22",
+      "visible_metric": "8",
+      "priority": "high",
+      "reason": "同一民宿账号的搭子场景，可对比同账号不同标题和图片结构。"
+    },
+    {
+      "title": "大理才村|年轻人氛围小院招6/7月室友啦🏡",
+      "account": "大理吉市十六民宿",
+      "visible_date": "06-21",
+      "visible_metric": "85",
+      "priority": "high",
+      "reason": "民宿账号，标题包含年轻人氛围小院和转化信息，适合拆解直接转化型结构。"
+    },
+    {
+      "title": "大理待了第三年，我真的不懂这里的院子社交…",
+      "account": "歪火虫🤪",
+      "visible_date": "03-26",
+      "visible_metric": "89",
+      "priority": "medium",
+      "reason": "游客/个人视角可能更有生活感，但不能直接照搬民宿主口吻。"
+    },
+    {
+      "title": "在大理住到了全是年轻人的梦中情栈",
+      "account": "香菇香菇",
+      "visible_date": "2025-11-02",
+      "visible_metric": "33",
+      "priority": "medium",
+      "reason": "年轻人情栈场景，适合学习生活方式表达，但需确认是否游客视角。"
+    },
+    {
+      "title": "大理旅居20天入住三家民宿真实感受～",
+      "account": "一只鸡腿子呀",
+      "visible_date": "2025-05-29",
+      "visible_metric": "444",
+      "priority": "medium",
+      "reason": "数据相对高，适合做游客对比样本，不能直接作为自营口吻。"
+    },
+    {
+      "title": "🔥大理住宿好去处｜认识新搭子+小院拼餐，快",
+      "account": "给猫织毛衣",
+      "visible_date": "06-09",
+      "visible_metric": "17",
+      "priority": "medium",
+      "reason": "标题包含搭子和拼餐，适合观察图片是否支撑社交活动。"
+    },
+    {
+      "title": "大理|让客人哭着离开，到底是什么样的小院？",
+      "account": "一个池六",
+      "visible_date": "2025-09-13",
+      "visible_metric": "1.5万",
+      "priority": "high_with_caution",
+      "reason": "可见互动很高，值得拆标题和情绪结构；但标题夸张，不能照搬到默认 Prompt。"
+    },
+    {
+      "title": "今晚小院拼餐局，欢迎一个人的你",
+      "account": "山海船长",
+      "visible_date": "06-25",
+      "visible_metric": "4",
+      "priority": "medium",
+      "reason": "非常贴近单人旅行和拼餐场景，适合验证图片中是否真的有拼餐画面。"
+    },
+    {
+      "title": "替你们试过了，这是大理最喜欢的洱海边小院",
+      "account": "云朵海边小院",
+      "visible_date": "06-30",
+      "visible_metric": "6",
+      "priority": "medium",
+      "reason": "小院和洱海边场景明确，需确认是游客推荐还是民宿自营。"
+    }
+  ],
+  "next_manual_steps": [
+    "逐条打开 high 和 high_with_caution 候选。",
+    "记录完整标题、正文、标签、点赞、收藏、评论。",
+    "至少截取首图和 2-3 张正文重点对应图。",
+    "判断每个正文卖点是否被图片、正文或评论支撑。",
+    "只有确认完整内容后再转为正式样本。"
+  ]
+}

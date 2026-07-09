@@ -3,6 +3,7 @@ package com.homestay.content.service;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.homestay.content.config.AiProperties;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
@@ -17,7 +18,11 @@ public class DeepSeekClient {
     private final ObjectMapper objectMapper;
     private final AiProperties properties;
 
-    public DeepSeekClient(RestClient deepSeekRestClient, ObjectMapper objectMapper, AiProperties properties) {
+    public DeepSeekClient(
+            @Qualifier("deepSeekRestClient") RestClient deepSeekRestClient,
+            ObjectMapper objectMapper,
+            AiProperties properties
+    ) {
         this.restClient = deepSeekRestClient;
         this.objectMapper = objectMapper;
         this.properties = properties;

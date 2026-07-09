@@ -15,7 +15,7 @@ public record AiProperties(
     }
 
     public double safeTemperature() {
-        return temperature == null ? 0.7 : temperature;
+        return temperature == null ? 0.45 : temperature;
     }
 
     public boolean missingApiKey() {

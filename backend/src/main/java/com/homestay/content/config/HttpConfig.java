@@ -15,6 +15,13 @@ public class HttpConfig {
     }
 
     @Bean
+    RestClient visionRestClient(VisionProperties properties) {
+        return RestClient.builder()
+                .baseUrl(properties.baseUrl())
+                .build();
+    }
+
+    @Bean
     ObjectMapper objectMapper() {
         return new ObjectMapper().findAndRegisterModules();
     }

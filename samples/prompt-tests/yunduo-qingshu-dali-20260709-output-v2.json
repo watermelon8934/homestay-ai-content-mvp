@@ -1,0 +1,106 @@
+{
+  "test_id": "yunduo-qingshu-dali-20260709-output-v2",
+  "source_sample": "samples/prompt-tests/yunduo-qingshu-dali-20260708.json",
+  "generated_at": "2026-07-09",
+  "generation_mode": "manual_after_prompt_tuning",
+  "model_note": "按当前 Prompt 规则人工模拟生成，用于评估语气和结构，不代表线上模型实际输出。",
+  "titles": [
+    {
+      "text": "大理东门附近，住得省心一点",
+      "angle": "位置便利 + 省心住宿",
+      "risk_level": "low"
+    },
+    {
+      "text": "云朵情书，把住客喜欢的小事晒出来",
+      "angle": "民宿主日常分享",
+      "risk_level": "low"
+    },
+    {
+      "text": "大理小院和窗边，适合慢一点住",
+      "angle": "小院生活感",
+      "risk_level": "low"
+    },
+    {
+      "text": "东门附近的小院，住客记住了这些",
+      "angle": "好评细节整理",
+      "risk_level": "low"
+    }
+  ],
+  "selected_title": "大理东门附近，住得省心一点",
+  "body": {
+    "text": "今天想把住客提到的几个小细节放出来。不是为了把云朵情书写得多特别，而是这些日常确实会影响住起来舒不舒服。\n\n我们在大理东门附近，住客反馈里提到出行相对不堵，外卖也能比较快送到。白天可以看看阳光下的小院和窗边，晚上回房间，有每天收拾干净的房间和一点小甜品。\n\n如果你来大理，不想把时间都花在路上，也想有个能慢下来的角落，可以看看这里是不是你喜欢的节奏。",
+    "viewpoint": "homestay_owner_or_operator",
+    "tone": ["种草", "自然", "克制", "民宿主日常"],
+    "length": "medium"
+  },
+  "hashtags": [
+    "#大理民宿",
+    "#大理住宿",
+    "#大理旅行",
+    "#大理古城附近",
+    "#东门附近民宿",
+    "#小院民宿",
+    "#大理民宿推荐",
+    "#云南旅行",
+    "#民宿日常"
+  ],
+  "image_suggestions": [
+    {
+      "scene": "房间窗景和院子花景",
+      "purpose": "首图展示小院和房间氛围，承接正文里的小院和窗边。",
+      "must_be_real": true
+    },
+    {
+      "scene": "窗边饮品和外卖",
+      "purpose": "辅助表达外卖方便，也呈现住下来后的生活感。",
+      "must_be_real": true
+    },
+    {
+      "scene": "大理古城街区或东门附近氛围",
+      "purpose": "补充大理周边感，但不写具体距离。",
+      "must_be_real": true
+    },
+    {
+      "scene": "房间整理后的干净状态或小甜品",
+      "purpose": "如果老板有真实照片，可补充服务细节；没有就不强行配。",
+      "must_be_real": true
+    }
+  ],
+  "evidence_summary": [
+    {
+      "claim": "大理东门附近，出行相对不堵",
+      "source": "review",
+      "source_excerpt": "地理位置在东门附近，这边相对来说出行没有很堵"
+    },
+    {
+      "claim": "外卖比较快送到",
+      "source": "review",
+      "source_excerpt": "外卖也能很快送达"
+    },
+    {
+      "claim": "阳光下的小院和窗边适合展示",
+      "source": "review_and_image_notes",
+      "source_excerpt": "院子超漂亮，阳光下的民宿格外好看；图片素材包括房间窗景"
+    },
+    {
+      "claim": "房间每天收拾干净，每晚有小甜品",
+      "source": "review",
+      "source_excerpt": "每晚还有小甜品；每天都把房间收拾得很干净"
+    }
+  ],
+  "compliance_warnings": [
+    {
+      "type": "missing_info",
+      "message": "未提供价格、房型、具体步行距离、停车政策，不要写入正文。"
+    },
+    {
+      "type": "exaggeration_risk",
+      "message": "不要写古城内、离景点很近、百分百安静、随手一拍都是大片等未证实或模板化表达。"
+    }
+  ],
+  "rewrite_options": {
+    "softer": "今天翻到住客写下的几个小细节，想把它们放在一起。东门附近、外卖方便、阳光下的小院、每天收拾干净的房间，还有晚上的一点小甜品，都是住起来才会慢慢感受到的地方。",
+    "more_lifestyle": "如果你来大理，不想每天都赶着跑景点，可以留一点时间给窗边和小院。住客提到东门附近出行相对省心，外卖也方便，晚上回房间还有收拾干净的床和一点小甜品。",
+    "more_conversion": "来大理想住东门附近，可以看看云朵情书。住客反馈里提到出行相对不堵、外卖送达方便，院子和房间氛围也被喜欢。发布前建议老板补充房型、价格和可订日期。"
+  }
+}

@@ -14,4 +14,9 @@ app:
     api-key: ${DEEPSEEK_API_KEY:}
     model: ${DEEPSEEK_MODEL:deepseek-chat}
     max-tokens: ${DEEPSEEK_MAX_TOKENS:2200}
-    temperature: ${DEEPSEEK_TEMPERATURE:0.7}
+    temperature: ${DEEPSEEK_TEMPERATURE:0.45}
+  vision:
+    base-url: ${VISION_BASE_URL:https://api.openai.com}
+    api-key: ${VISION_API_KEY:${OPENAI_API_KEY:}}
+    model: ${VISION_MODEL:gpt-4o-mini}
+    max-tokens: ${VISION_MAX_TOKENS:900}

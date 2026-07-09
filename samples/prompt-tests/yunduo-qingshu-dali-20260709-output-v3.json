@@ -1,0 +1,85 @@
+{
+  "test_id": "yunduo-qingshu-dali-20260709-output-v3",
+  "source_sample": "samples/prompt-tests/yunduo-qingshu-dali-20260708.json",
+  "generated_at": "2026-07-09",
+  "generation_mode": "manual_structure_content_optimization",
+  "model_note": "在 v2 基础上优化结构和内容：减少说明文口吻，增加画面开头、经营动作和适合边界。",
+  "titles": [
+    {
+      "text": "大理东门附近，有个能慢下来的院子",
+      "angle": "位置 + 小院生活感",
+      "risk_level": "low"
+    },
+    {
+      "text": "云朵情书，被住客记住的几个小事",
+      "angle": "民宿主真实记录",
+      "risk_level": "low"
+    },
+    {
+      "text": "来大理，想住得省心一点可以看看",
+      "angle": "住客决策",
+      "risk_level": "low"
+    },
+    {
+      "text": "东门附近的小院，适合慢一点住",
+      "angle": "小院 + 适合人群",
+      "risk_level": "low"
+    }
+  ],
+  "selected_title": "大理东门附近，有个能慢下来的院子",
+  "body": {
+    "text": "有住客说，阳光下的院子很好看。我们每天整理房间、准备小甜品的时候，也会觉得这些小事被记住，挺值得。\n\n云朵情书在大理东门附近，住客反馈里提到出行相对不堵，外卖也能比较快送到。白天可以坐在窗边看看院子，晚上回来，是收拾干净的房间和一点甜。\n\n这里不适合把行程塞得太满的人，更适合来大理想住得省心、慢一点的人。",
+    "viewpoint": "homestay_owner_or_operator",
+    "tone": ["种草", "自然", "克制", "民宿主日常"],
+    "length": "medium"
+  },
+  "structure_notes": [
+    "第一段用住客记住的画面开头，直接建立情绪，不再解释写作目的。",
+    "第二段把位置、外卖、院子、房间打扫、小甜品串成住下来的一天。",
+    "第三段给适合边界，避免只堆优点。",
+    "全篇不伪装游客，不写感谢信，不写未提供的价格、距离、停车、房型。"
+  ],
+  "hashtags": [
+    "#大理民宿",
+    "#大理住宿",
+    "#大理旅行",
+    "#大理东门附近",
+    "#小院民宿",
+    "#大理民宿推荐",
+    "#云南旅行",
+    "#民宿日常"
+  ],
+  "image_suggestions": [
+    {
+      "scene": "阳光下的院子或房间窗景",
+      "purpose": "首图承接标题里的小院和慢下来。",
+      "must_be_real": true
+    },
+    {
+      "scene": "窗边饮品和外卖",
+      "purpose": "展示住下来后的生活感，也对应外卖方便。",
+      "must_be_real": true
+    },
+    {
+      "scene": "整理干净的房间或小甜品",
+      "purpose": "证明服务细节，不空写服务好。",
+      "must_be_real": true
+    },
+    {
+      "scene": "大理东门附近街区氛围",
+      "purpose": "补充周边感，但不写具体距离。",
+      "must_be_real": true
+    }
+  ],
+  "quality_self_check": {
+    "better_than_v2": [
+      "开头更像真实发帖，不像说明文。",
+      "服务细节从'每天打扫和小甜品'落到了经营动作。",
+      "结尾有适合边界，比单纯欢迎更可信。"
+    ],
+    "remaining_risk": [
+      "如果线上模型照抄'挺值得'太多次，后续需要增加同义表达池。",
+      "如果老板没有小甜品照片，配图建议应自动降级为房间整理图。"
+    ]
+  }
+}
