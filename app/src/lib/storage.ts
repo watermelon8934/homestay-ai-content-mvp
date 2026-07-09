@@ -3,8 +3,8 @@ import type { NoteDraft, Property } from "./types";
 
 const PROPERTY_KEY = "msai_property_v1";
 const QUOTA_KEY = "msai_quota_v1";
-const HISTORY_KEY = "msai_history_v1";
-const CURRENT_KEY = "msai_current_v1";
+const HISTORY_KEY = "msai_history_v2";
+const CURRENT_KEY = "msai_current_v2";
 
 const DAILY_LIMIT = 5;
 

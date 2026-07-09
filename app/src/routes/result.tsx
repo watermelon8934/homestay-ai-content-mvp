@@ -61,7 +61,11 @@ function ResultPage() {
       return;
     }
     setRegenerating(true);
-    const res = await generateNote(draft.reviewInput, draft.property);
+    const res = await generateNote(
+      draft.reviewInput,
+      draft.property,
+      draft.reviewImages ?? [],
+    );
     setRegenerating(false);
     if (!res.ok) {
       toast.error(res.error);

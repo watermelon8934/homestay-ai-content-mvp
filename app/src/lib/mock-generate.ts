@@ -5,10 +5,10 @@ import type { NoteDraft, Property } from "./types";
 // 茶壶、木椅、木、麻、石 等）。
 
 const FIXED_TITLES = [
-  "来大理挑民宿，可以先看这几个细节",
-  "带娃住两晚后，这条反馈挺有参考价值",
-  "想住得省心点，这类民宿细节可以看",
-  "大理住宿怎么选，可以看住客真实反馈",
+  "大理古城里，住得省心一点",
+  "住在古城东门附近的小院日常",
+  "来大理住两晚，慢一点也好",
+  "大理小院的几件日常小事",
 ];
 
 const FIXED_TAGS = [
@@ -31,32 +31,33 @@ const FIXED_IMAGE_IDEAS = [
   "与住客好评内容对应的截图或整理图",
 ];
 
-function extractQuotes(review: string): string[] {
-  const parts = review
-    .split(/[。！？!?\n]/)
-    .map((s) => s.trim())
-    .filter((s) => s.length >= 6 && s.length <= 40);
-  return parts.slice(0, 2);
+function hasAny(review: string, words: string[]): boolean {
+  return words.some((word) => review.includes(word));
 }
 
-function buildBody(property: Property, quotes: string[]): string {
+function buildBody(property: Property, review: string): string {
   const city = property.city || "大理";
   const name = property.name || "山间小院";
-
-  const quoteBlock =
-    quotes.length > 0
-      ? `\n\n这条评价里有一句很适合做参考：\n「${quotes[0]}」\n\n它不是夸张的营销词，但能帮正在选住宿的人判断这里是不是适合自己。`
-      : "";
+  const locationText = hasAny(review, ["东门", "古城", "位置", "出行", "外卖"])
+    ? "我们在古城附近，出门逛、打车和点外卖都比较省心。来大理的几天，如果不用把时间都耗在路上，人会轻松很多。"
+    : `我们在${city}，一直想把住宿里那些不夸张但实用的小细节做好。`;
+  const stayText = hasAny(review, ["干净", "收拾", "卫生", "房间"])
+    ? "房间每天认真收拾，床品和卫浴这些基础细节，我们会反复确认。住下来觉得舒服，比一句漂亮宣传更重要。"
+    : "我们希望客人住下来的几天，不用把太多精力花在住宿上，可以慢一点安排自己的行程。";
+  const ownerText = hasAny(review, ["老板", "服务", "回复", "小甜品", "热情"])
+    ? "消息看到会尽量及时回，房间也会认真收拾好。很多经营里的小动作，其实都是希望大家到店后少一点陌生感。"
+    : "能让住客觉得放松，对我们来说就是很重要的反馈。";
 
   return [
-    `来${city}挑民宿，如果你更在意住得舒服、带孩子省心、周边逛起来方便，可以先看这几个细节。`,
+    `${name}想分享的，是住下来会慢慢被注意到的几个日常细节。`,
     "",
-    `${name}这条住客反馈里，比较值得看的不是一句“推荐”，而是几个很具体的体验点：房间干净、晚上安静、窗外能看到山，消息回复也比较及时。`,
-    quoteBlock,
+    locationText,
     "",
-    "如果是一家人住两晚，“整体很放松”其实很有参考价值。它说明这家民宿可以把基础体验做好：睡得舒服、沟通顺、出门逛也不费劲。",
+    stayText,
     "",
-    "发布时可以把房间实拍、窗外角度和周边真实场景放在前几张，让文字里的信息都能被看见。想找这类住宿的话，可以先收藏起来对照看看。",
+    ownerText,
+    "",
+    `如果你来${city}，也想住得舒服、出门方便、沟通顺一点，可以看看这里是不是适合你的行程。`,
   ]
     .filter(Boolean)
     .join("\n");
@@ -86,14 +87,11 @@ export function mockGenerate(
         resolve({ ok: false, error: "生成失败，请重试。本次不计入额度。" });
         return;
       }
-      const quotes = extractQuotes(review);
-      const body = buildBody(property, quotes);
+      const body = buildBody(property, review);
 
       const rationale = [
-        "本示例采用小红书种草结构：开头进入挑民宿场景，中间提炼真实卖点，结尾提示如何配图和收藏对照。",
-        quotes.length
-          ? "从好评中提取了 1 句短句作为信任背书，没有整段搬运评价。"
-          : "未提取到合适长度的引用句。",
+        "本示例采用民宿自营账号口吻：用住客反馈里的事实，转成店铺自己的日常介绍。",
+        "未使用点评分析口吻，未使用长引用，也没有伪装成游客入住。",
         "标题、标签、配图建议均围绕输入中的城市、住宿体验和好评信息组织。",
       ].join("\n");
 

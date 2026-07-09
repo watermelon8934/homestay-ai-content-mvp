@@ -1,9 +1,10 @@
 import { mockGenerate, type GenerateResult } from "./mock-generate";
-import type { Property } from "./types";
+import type { Property, UploadedImage } from "./types";
 
 export async function generateNote(
   review: string,
   property: Property,
+  images: UploadedImage[] = [],
 ): Promise<GenerateResult> {
   try {
     const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL ?? "").replace(
@@ -13,7 +14,7 @@ export async function generateNote(
     const response = await fetch(`${apiBaseUrl}/api/generate-note`, {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ review, property }),
+      body: JSON.stringify({ review, property, images }),
     });
 
     const payload = (await response.json().catch(() => null)) as
